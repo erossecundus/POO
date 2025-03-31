@@ -55,7 +55,6 @@ public class Aplic {
         System.out.println("Salario Bruto:      " + df.format(funcComissionado.calcSalBruto()));
         System.out.println("Gratificação:       " + df.format(funcComissionado.calcGratificacao()));
         System.out.println("Salario liquido:    " + df.format(funcComissionado.calcSalLiquido()));
-        // TODO: revisar aqui!!
 
     }
     
