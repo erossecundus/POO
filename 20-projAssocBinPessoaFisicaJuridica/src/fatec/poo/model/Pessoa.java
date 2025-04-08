@@ -9,15 +9,21 @@ public abstract class Pessoa {
     private int anoInscricao;
     private double totalCompras;
     
+    // apontando para pedidos
+    private PedidoCompra[] pedidoCompra;
+    private int qtdCompras;
+    
     public Pessoa (String n, int ai) {
         this.nome = n;
         this.anoInscricao = ai;
+        pedidoCompra = new PedidoCompra[10];
     }
             
     public abstract double calcBonus(int b);
     
-    public void addCompras(double c) {
-        totalCompras += c ;
+    public void addPedidoCompra(PedidoCompra pc) {
+        pedidoCompra[qtdCompras++] = pc;
+        totalCompras += pc.getValor();
     }
     
     public String getNome() {
@@ -29,4 +35,9 @@ public abstract class Pessoa {
     public double getTotalCompras() {
         return totalCompras;
     }
+
+    public int getQtdCompras() {
+        return qtdCompras;
+    }
+    
 }
