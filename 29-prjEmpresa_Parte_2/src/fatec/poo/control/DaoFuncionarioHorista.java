@@ -63,7 +63,7 @@ public class DaoFuncionarioHorista {
             ps.setString(4,fh.getDtAdmissao());
             ps.setString(5,fh.getCargo());
             ps.setDouble(6,fh.getValHorTrab());
-            ps.setString(7,fh.getDepartamento().getSigla());
+            ps.setString(7,fh.getDepartamento().getSigla()); // estabelece a chave estrangeira
             
             ps.execute();
         } catch (SQLException ex) {
